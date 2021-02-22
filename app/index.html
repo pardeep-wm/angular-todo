@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="angularTodo">
+  <head>
+    <meta charset="utf-8">
+    <title>Todo List </title>
+    <!-- <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" /> -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="http://mbenford.github.io/ngTagsInput/css/ng-tags-input.min.css" />
+    
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/bootstrap//bootstrap-tagsinput.js"></script>
+    
+    <script src="app.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="controllers/todoListController.js"></script>
+  
+    
+    
+  </head>
+  <body>
+    <!-- <div class="container"> <div ng-view class="view-frame"></div></div> -->
+    <div class="page-content page-container" id="page-content">
+      <div class="padding">
+          <div class="row container justify-content-center">
+              <div class="col-md-12">
+                  <div class="card px-3">
+                      <div class="card-body">
+                          <h4 class="card-title">Awesome Todo list</h4>
+                          <div ng-view class="view-frame"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  </body>
+</html>

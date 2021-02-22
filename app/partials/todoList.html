@@ -1,0 +1,36 @@
+<!-- <div ng-controller="TodoListController">
+    
+    <form>
+      Name <input type='text' ng-model="form.name" /> </br>
+      Tags <tags-input ng-model="form.tags"></tags-input>
+      <button type="submit" ng-click='submitForm()'>Submit</button>
+    </form>
+    Search: <input ng-model="query">
+    <ul class="todos">
+        <li ng-repeat="todo in todos | filter:query">
+          <span>{{todo.todo_item.name}}</span>
+          <p>{{todo.todo_item.status}}</p>
+        </li>
+    </ul>
+</div> -->
+
+<div ng-controller="TodoListController">
+<div  class="add-items"> 
+  <input type="text" ng-model="form.name" class="form-control todo-list-input" placeholder="What do you need to do today?"> </br>
+  <tags-input ng-model="form.tags" class=" todo-list-input"></tags-input>
+  <button class="add btn btn-primary font-weight-bold todo-list-add-btn" ng-click='submitForm()'>{{btnText}}</button> 
+</div>
+  <div class="list-wrapper" >
+      <ul class="d-flex flex-column-reverse todo-list">
+        <li ng-repeat="todo in todos" >
+          <div class="form-check d-flex">
+            <label class="form-check-label "> 
+              {{todo.todo_item.name}} 
+            </label> 
+            <a href="javascript:void(0)" class=" add btn btn-primary font-weight-bold todo-list-add-btn" ng-click="markDelete(todo)">Mark {{todo.todo_item.is_deleted ? 'Active': 'Delete'}}</a>
+            <a href="javascript:void(0)" class=" add btn btn-primary font-weight-bold todo-list-add-btn" ng-click="editTodo(todo)">Edit</a>
+          </div>
+        </li>
+      </ul>
+</div>
+</div>
